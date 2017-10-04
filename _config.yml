@@ -12,7 +12,7 @@ description: >
   Awesome site description here
 logo: "/assets/images/logo.jpg"
 baseurl: "/Jekyll-AMP" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://uvalib.github.io" # the base hostname & protocol for your site
 paginate:	5 # The number of posts to show per page on your homepage
 
 name: 'Your Name'
@@ -34,3 +34,61 @@ kramdown:
 
 gems:
   - jekyll-paginate
+
+prose:
+  siteurl: 'https://uvalib.github.io/Jekyll-AMP'
+  #relativeLinks: 'http://thetaper.library.virginia.edu/links.jsonp'
+  ignore:
+    - .gitignore
+    - "CNAME"
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - index.md
+    - _config.yml
+    - /_posts/testpost
+  media: "images"
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          element: 'hidden'
+          value: false
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          help: "Enable Disqus comments"
+          value: true
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Categories"
+          placeholder: "Add Categories"
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: "CURRENT_DATETIME"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "excerpt"
+        field:
+          element: "textarea"
+          label: "Excerpt"
+          help: "Fill this in to provide an excerpt"
+      - name: "excerpt_separator"
+        field:
+          element: "text"
+          label: "Excerpt Separator"
+          help: "If this is filled in, the entire post will be displayed up to the seperator placeholder."
+          placeholder: "Replace with something like: <!--more-->"
