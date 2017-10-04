@@ -58,12 +58,6 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      - name: "comments"
-        field:
-          element: "checkbox"
-          label: "Comments"
-          help: "Enable Disqus comments"
-          value: true
       - name: "categories"
         field:
           element: "multiselect"
